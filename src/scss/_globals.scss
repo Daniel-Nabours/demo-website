@@ -8,11 +8,28 @@
   overflow: hidden;
 }   
 
-.layout-div {
+.layout-div-sm {
   border: 1px solid #444444;
   border-radius: 1rem;;
   background-color: #444444;
   margin:1rem;
+  height:20vh; 
+  width:30vw;
+}
+
+@media screen and (max-width:1200px) {
+  .layout-div-sm {
+    height:20vh; 
+    width:60vw;
+  }
+  
+}
+@media screen and (max-width:600px) {
+  .layout-div-sm {
+    height:20vh; 
+    width:90vw;
+  }
+  
 }
 
 .navbar {
@@ -33,7 +50,14 @@
   position: absolute; 
   height: 30vh;
   width: 30vh;
-  animation: 4s spaceMarineOut 1 forwards ease-in-out;
+  animation: 5s spaceMarineOut 1 forwards ease-in-out;
+}
+.space-marine-init{ 
+  position: absolute; 
+  height: 30vh;
+  width: 30vh;
+  left: -500px;
+  bottom: -500px;
 }
 
 @keyframes spaceMarineIn {

@@ -105,7 +105,7 @@ const Navbar = () => {
     </Menu>
   );
 
-  const [auth, setAuth] = React.useState(true);
+  const [auth, setAuth] = React.useState<boolean>(null); 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAuth(event.target.checked);
   };
@@ -156,7 +156,7 @@ const Navbar = () => {
       {renderMenu}
 
       <div style={{overflow:"hidden"}}> 
-        <img className={auth ? "space-marine-in" : "space-marine-out"} alt='a displeased space marine from warhammer 40k slowly peeks at you from the corner of the screen' src={heresy} />
+        <img className={auth === null ? "space-marine-init" : auth ? "space-marine-in" : "space-marine-out"} alt='a displeased space marine from warhammer 40k slowly peeks at you from the corner of the screen' src={heresy} />
       </div>
     </div>
   );
