@@ -5,10 +5,7 @@ function App() {
 
   return (
     <div className="App">   
-        <Navbar/> 
-      <div className="layout-div-sm" />
-      <div className="layout-div-sm" />
-      <div className="layout-div-sm" />
+        <Navbar/>  
     </div>
   );
 }
